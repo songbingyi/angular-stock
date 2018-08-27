@@ -11,12 +11,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { StockManageComponent } from './stock/stock-manage/stock-manage.component';
 import { StarsComponent } from './stars/stars.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { StockFormComponent } from './stock/stock-form/stock-form.component';
+import { StockService } from './service/stock.service';
 
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'stock', component: StockManageComponent},
-  {path: 'dashboard', component: DashboardComponent}
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'stock/:id', component: StockFormComponent}
 ];
 
 @NgModule({
@@ -29,13 +32,14 @@ const routeConfig: Routes = [
     SidebarComponent,
     StockManageComponent,
     StarsComponent,
-    DashboardComponent
+    DashboardComponent,
+    StockFormComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routeConfig)
   ],
-  providers: [],
+  providers: [StockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
