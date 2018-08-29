@@ -12,7 +12,8 @@ import { StockManageComponent } from './stock/stock-manage/stock-manage.componen
 import { StarsComponent } from './stars/stars.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StockFormComponent } from './stock/stock-form/stock-form.component';
-import { StockService } from './service/stock.service';
+import { StockService } from './stock/stock.service';
+
 
 
 const routeConfig: Routes = [

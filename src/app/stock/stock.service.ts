@@ -17,7 +17,7 @@ export class StockService {
     return this.stocks;
   }
   getStock(id: number): Stock {
-    return this.stocks.find(stock => stock.id === id);
+    return this.stocks.find(stock => stock.id == id);
   }
 }
 
