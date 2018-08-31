@@ -13,7 +13,7 @@ export class StockFormComponent implements OnInit {
   constructor(private routeInfo: ActivatedRoute, private stockService: StockService) { }
 
   ngOnInit() {
-    let stockId = this.routeInfo.snapshot.params['id'];
+    const stockId = this.routeInfo.snapshot.params['id'];
     console.log(stockId)
     this.stock = this.stockService.getStock(stockId);
     console.log(this.stock)
