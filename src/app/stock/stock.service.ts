@@ -17,7 +17,12 @@ export class StockService {
     return this.stocks;
   }
   getStock(id: number): Stock {
-    return this.stocks.find(stock => stock.id == id);
+    const ostock = this.stocks.find(stock => stock.id === id);
+    if (!ostock) {
+      return  new Stock(0, '', 0, 0, '', []);
+    } else {
+      return ostock;
+    }
   }
 }
 
