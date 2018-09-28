@@ -8,7 +8,7 @@ import { Stock, StockService } from '../stock.service';
   styleUrls: ['./stock-manage.component.css']
 })
 export class StockManageComponent implements OnInit {
-  private stocks: Array<Stock>;
+  stocks: Array<Stock>;
 
   constructor(public router: Router, private stockService: StockService) { }
 
