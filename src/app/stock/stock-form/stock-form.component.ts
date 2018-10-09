@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import {  ActivatedRoute, Router } from '@angular/router';
 import { Stock, StockService } from '../stock.service';
@@ -10,6 +10,7 @@ import { Stock, StockService } from '../stock.service';
 })
 export class StockFormComponent implements OnInit {
   stock: Stock;
+  name;
   constructor(private routeInfo: ActivatedRoute, private stockService: StockService, private router: Router) { }
 
   ngOnInit() {
@@ -18,8 +19,11 @@ export class StockFormComponent implements OnInit {
     this.stock = this.stockService.getStock(stockId);
     console.log(this.stock);
   }
+  test(e) {
+    console.log(e)
+  }
   cancle() {
-    this.router.navigateByUrl('stock');
+    this.router.navigate(['stock']);
   }
   save() {
     this.router.navigateByUrl('stock');

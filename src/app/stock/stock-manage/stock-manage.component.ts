@@ -16,10 +16,10 @@ export class StockManageComponent implements OnInit {
     this.stocks =  this.stockService.getStocks();
   }
   creat() {
-      this.router.navigateByUrl('/stock/0');
+      this.router.navigateByUrl('/stockForm/0');
   }
   update(stock: Stock) {
-    this.router.navigateByUrl('/stock/' + stock.id);
+    this.router.navigateByUrl('/stockForm/' + stock.id);
 
   }
 
