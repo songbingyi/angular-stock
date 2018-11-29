@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
   menus: Array<Menu>;
-  currentNumber: Number;
+  currentNumber;
   constructor(public router: Router) {
   }
   ngOnInit() {
